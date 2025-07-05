@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Timelines/Init.playable.meta
+guid: 4508847453c13ee47a65aa8241517a02
+========
+guid: 432dec4916e7cb845be1648f787d509a
+>>>>>>>> 52cbf3d8bc66f0485e543bc701e9d2aef6f0b95c:Assets/Timelines/stand_up.controller.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
