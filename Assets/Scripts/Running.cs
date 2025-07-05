@@ -27,6 +27,8 @@ public class PlayerGroundController : MonoBehaviour
         // Configuración inicial del CharacterController
         controller.center = new Vector3(0, controller.height / 2, 0);
         controller.skinWidth = 0.08f;
+
+
     }
 
     void Update()
