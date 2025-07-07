@@ -26,6 +26,7 @@
 *.terrainlayer merge=unityyamlmerge eol=lf
 *.mixer merge=unityyamlmerge eol=lf
 *.shadervariants merge=unityyamlmerge eol=lf
+*.scenetemplate merge=unityyamlmerge eol=lf
 
 
 ## git-lfs ##
