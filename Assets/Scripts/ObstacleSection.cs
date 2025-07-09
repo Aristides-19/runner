@@ -1,20 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sections : MonoBehaviour {
-
+public class Sections : MonoBehaviour
+{
     private int sectionsCount = 0;
     private int currentObstacleIndex = 0;
 
     [SerializeField]
     private List<GameObject> obstacles;
-    [SerializeField]
-    private float speed = 10;
+
     [SerializeField]
     private float sectionSize = 48;
 
-    void Start(){
+    void Start()
+    {
         sectionsCount = GameObject.FindGameObjectsWithTag("Section").Length;
         obstacles = new List<GameObject>();
 
@@ -28,17 +27,18 @@ public class Sections : MonoBehaviour {
 
         randomObstacle();
     }
-    public void randomObstacle() {
 
+    public void randomObstacle()
+    {
         obstacles[currentObstacleIndex].SetActive(false);
 
         currentObstacleIndex = Random.Range(0, obstacles.Count);
         obstacles[currentObstacleIndex].SetActive(true);
-
     }
 
-    void Update(){
-        transform.Translate(Vector3.back * speed * Time.deltaTime);
+    void Update()
+    {
+        transform.Translate(Vector3.back * SpeedController.speed * Time.deltaTime);
 
         if (transform.localPosition.z <= -sectionSize)
         {
@@ -46,5 +46,4 @@ public class Sections : MonoBehaviour {
             transform.Translate(Vector3.forward * sectionSize * sectionsCount);
         }
     }
-
 }
