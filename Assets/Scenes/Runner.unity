@@ -1612,6 +1612,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2b0a4cd8fec93fb4884391718d02d85a, type: 2}
+    - target: {fileID: 4424200247020527054, guid: 00735cd7a4de4054c960c1e508755f64,
+        type: 3}
+      propertyPath: forwardSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7207726507544474470, guid: 00735cd7a4de4054c960c1e508755f64,
         type: 3}
       propertyPath: m_Name
@@ -1730,7 +1735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4230ffcd9dda349abb8c998fd2710a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 10
+  forwardSpeed: 0
   laneDistance: 3
   laneChangeSpeed: 8
   jumpForce: 5

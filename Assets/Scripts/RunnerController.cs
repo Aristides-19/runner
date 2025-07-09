@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider), typeof(Animator))]
-public class PlayerController : MonoBehaviour
+public class RunnerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField]
