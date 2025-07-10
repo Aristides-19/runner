@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InitToMenu : MonoBehaviour
+public class MenuToRunner : MonoBehaviour
 {
     public void LoadNextScene()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Runner");
     }
 }

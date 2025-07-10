@@ -53,6 +53,17 @@ public class RunnerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void Start()
+    {
+        StartCoroutine(waitForIdle());
+    }
+
+    IEnumerator waitForIdle()
+    {
+        yield return new WaitForSeconds(TimeController.idleTime * 0.5f);
+        animator.SetBool("isIdle", false);
+    }
+
     void FixedUpdate()
     {
         Vector3 forwardMove = Vector3.forward * forwardSpeed * Time.fixedDeltaTime;
@@ -82,6 +93,7 @@ public class RunnerController : MonoBehaviour
             groundLayer
         );
         animator.SetBool("isGrounded", isGrounded);
+        animator.SetFloat("runSpeed", SpeedController.speed * 0.11f);
         HandleInput();
     }
 
