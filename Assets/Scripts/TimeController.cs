@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
+    private bool canUpdate = false;
     private float initialTime;
     public static float idleTime = 5f;
-    public static bool canUpdate = false;
+
+    [SerializeField]
+    private TextMeshProUGUI timeText;
 
     void Start()
     {
@@ -19,11 +24,16 @@ public class TimeController : MonoBehaviour
         if (!canUpdate)
             return;
         float elapsedTime = Time.time - initialTime;
-        Debug.Log("Elapsed Time: " + elapsedTime + " seconds");
+        timeText.text = FormatTime(elapsedTime) + " minutos";
 
         SpeedController.speed += SpeedController.acceleration * Time.deltaTime;
         SpeedController.speed = Mathf.Clamp(SpeedController.speed, 10f, SpeedController.maxSpeed);
-        Debug.Log("Current Speed: " + SpeedController.speed);
+    }
+
+    private string FormatTime(float time)
+    {
+        TimeSpan t = TimeSpan.FromSeconds(time);
+        return string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
     }
 
     IEnumerator waitForSpeed(float secs)
