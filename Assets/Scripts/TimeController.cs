@@ -8,6 +8,7 @@ public class TimeController : MonoBehaviour
     private bool canUpdate = false;
     private float initialTime;
     public static float idleTime = 5f;
+    public static float elapsedTime = 0f;
 
     [SerializeField]
     private TextMeshProUGUI timeText;
@@ -23,7 +24,7 @@ public class TimeController : MonoBehaviour
     {
         if (!canUpdate)
             return;
-        float elapsedTime = Time.time - initialTime;
+        elapsedTime = Time.time - initialTime;
         timeText.text = FormatTime(elapsedTime) + " minutos";
 
         SpeedController.speed += SpeedController.acceleration * Time.deltaTime;
@@ -43,7 +44,7 @@ public class TimeController : MonoBehaviour
         for (int i = 0; i < 40; i++)
         {
             SpeedController.speed += 0.25f;
-            float elapsedTime = Time.time - initialTime;
+            elapsedTime = Time.time - initialTime;
             timeText.text = FormatTime(elapsedTime) + " minutos";
             yield return new WaitForSeconds(0.1f);
         }

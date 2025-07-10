@@ -24,9 +24,6 @@ public class Sections : MonoBehaviour
             }
         }
 
-        Debug.Log("Obstacles found: " + obstacles.Count);
-        Debug.Log("Sections count: " + sectionsCount);
-
         randomObstacle();
     }
 
