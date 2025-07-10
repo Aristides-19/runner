@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4301738828628692257}
   - component: {fileID: 5687522361105034688}
   - component: {fileID: 908432914047164507}
-  - component: {fileID: 6496030372522266315}
   m_Layer: 0
   m_Name: Runner Light
   m_TagString: Untagged
@@ -119,15 +118,3 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!114 &6496030372522266315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 72164145784272814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 884f7ea5b84d1c845ac4c36cbaf0e828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
