@@ -43,6 +43,8 @@ public class TimeController : MonoBehaviour
         for (int i = 0; i < 40; i++)
         {
             SpeedController.speed += 0.25f;
+            float elapsedTime = Time.time - initialTime;
+            timeText.text = FormatTime(elapsedTime) + " minutos";
             yield return new WaitForSeconds(0.1f);
         }
         canUpdate = true;
