@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -60,7 +61,7 @@ public class RunnerController : MonoBehaviour
 
     IEnumerator waitForIdle()
     {
-        yield return new WaitForSeconds(TimeController.idleTime * 0.5f);
+        yield return new WaitForSeconds(TimeController.idleTime * 0.3f);
         animator.SetBool("isIdle", false);
     }
 
@@ -93,7 +94,7 @@ public class RunnerController : MonoBehaviour
             groundLayer
         );
         animator.SetBool("isGrounded", isGrounded);
-        animator.SetFloat("runSpeed", SpeedController.speed * 0.11f);
+        animator.SetFloat("runSpeed", Mathf.Clamp(1f, SpeedController.speed * 0.11f, 2f));
         HandleInput();
     }
 
