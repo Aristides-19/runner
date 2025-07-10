@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forwardSpeed: 0
-  laneDistance: 3
+  laneDistance: 4.25
   laneChangeSpeed: 8
-  jumpForce: 5
+  jumpForce: 7.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

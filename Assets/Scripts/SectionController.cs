@@ -6,7 +6,6 @@ public class Sections : MonoBehaviour
     private int sectionsCount = 0;
     private int currentObstacleIndex = 0;
 
-    [SerializeField]
     private List<GameObject> obstacles;
 
     [SerializeField]
@@ -24,6 +23,9 @@ public class Sections : MonoBehaviour
                 obstacles.Add(child.gameObject);
             }
         }
+
+        Debug.Log("Obstacles found: " + obstacles.Count);
+        Debug.Log("Sections count: " + sectionsCount);
 
         randomObstacle();
     }
